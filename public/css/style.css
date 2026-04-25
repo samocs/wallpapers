@@ -1,0 +1,466 @@
+/* --- Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f0f0f;
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Layout Utilities --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%; /* Added to ensure proper alignment in hero */
+}
+
+.grid-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    margin-bottom: 32px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+}
+
+p {
+    color: #888888;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+/* --- Buttons --- */
+.btn, .cta, .form-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn:hover, .cta:hover, .form-btn:hover {
+    background-color: #ffffff;
+    color: #0f0f0f;
+}
+
+.cta {
+    padding: 12px 24px;
+    font-size: 14px;
+    margin-top: 32px;
+}
+
+.form-btn {
+    width: 100%;
+    background-color: #ffffff;
+    color: #0f0f0f;
+}
+
+.form-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* --- Navigation --- */
+.navbar {
+    padding: 32px 0;
+    position: sticky;
+    top: 0;
+    background-color: #0f0f0f;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 16px 32px;
+    width: 100%;
+    transition: all 300ms ease;
+}
+
+.navbar .container:hover {
+    border-color: #888888;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.nav {
+    display: flex;
+    gap: 48px;
+}
+
+.nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #888888;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav a:hover, .nav a.active {
+    color: #ffffff;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+}
+
+.nav a:hover::after, .nav a.active::after {
+    width: 100%;
+}
+
+/* --- Sections --- */
+.features, .cta-section, .banner, .footer, .carousel-section {
+    background-color: #0a0a0a;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 64px 32px;
+}
+
+.hero, .contact-section {
+    padding: 96px 32px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+/* --- Carousel --- */
+.carousel-section {
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    margin-bottom: 16px;
+}
+
+.carousel-controls button {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 8px 16px;
+    margin: 24px 8px 0;
+    font-size: 18px;
+}
+
+.carousel-controls button:hover {
+    background-color: #ffffff;
+    color: #0f0f0f;
+}
+
+/* --- Gallery --- */
+.gallery {
+    padding: 96px 32px;
+    min-height: calc(100vh - 100px);
+    background-color: #0f0f0f;
+}
+
+.gallery-header {
+    margin-bottom: 64px;
+}
+
+.gal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.gal-item {
+    aspect-ratio: 3 / 4;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gal-item:hover {
+    border-color: #ffffff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Modal --- */
+.image-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+}
+
+.image-modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.image-modal-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.image-modal-close:hover {
+    color: #888;
+}
+
+/* --- Contact Form --- */
+.contact-section {
+    justify-content: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-form {
+    background-color: #0a0a0a;
+    padding: 48px;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    margin-bottom: 48px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #0f0f0f;
+    border: 1px solid #2a2a2a;
+    color: #e0e0e0;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form-group.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.form-group.checkbox input {
+    width: 18px;
+    margin-right: 12px;
+    accent-color: #ffffff;
+}
+
+.form-group.checkbox label {
+    margin: 0;
+    font-size: 13px;
+    text-transform: none;
+}
+
+/* --- About Page Elements --- */
+.accordion-item {
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 24px 0;
+    color: #ffffff;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-content {
+    display: none;
+    padding-bottom: 24px;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 32px;
+    color: #888;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #2a2a2a;
+    padding: 16px;
+    text-align: left;
+}
+
+.comparison-table th {
+    color: #ffffff;
+}
+
+/* --- Footer --- */
+.footer {
+    padding-bottom: 32px;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #888;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid #2a2a2a;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    h1 { font-size: 36px; }
+    h2 { font-size: 28px; }
+    .navbar .container { flex-wrap: wrap; gap: 24px; padding: 16px; }
+    .nav { gap: 24px; width: 100%; justify-content: center; }
+    .grid-cols-3 { grid-template-columns: 1fr; }
+    .carousel-item img { height: 250px; }
+    .contact-form { padding: 24px; }
+}
