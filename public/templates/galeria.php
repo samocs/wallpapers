@@ -1,9 +1,7 @@
 <?php
-
-require __DIR__ . '/../src/functions.php';
-
-$title = page_title('Gallery');
-
+require_once '../../app/core/App.php';
+require_once '../../app/core/Helper.php';
+$title = Helper::getPageTitle();
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +13,7 @@ $title = page_title('Gallery');
     <meta name="keywords" content="gallery, wallpapers, minimal, monochrome">
     <meta name="author" content="samocs">
     <title><?= htmlspecialchars($title) ?></title>
-    <link rel="stylesheet" href="../../../skriptovacie%20jazyky/semestralna%20praca/public/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 <!-- Navigation -->
@@ -23,7 +21,7 @@ $title = page_title('Gallery');
     <div class="container">
         <a href="../../../skriptovacie%20jazyky/semestralna%20praca/public/index.php" class="logo">sam</a>
         <ul class="nav">
-            <li><a href="../../../skriptovacie%20jazyky/semestralna%20praca/public/index.php">home</a></li>
+            <li><a href="home.php">home</a></li>
             <li><a href="galeria.php" class="active">gallery</a></li>
             <li><a href="o_nas.php">about</a></li>
             <li><a href="kontakt.php">contact</a></li>

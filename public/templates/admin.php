@@ -2,13 +2,11 @@
 declare(strict_types=1);
 session_start();
 
-/* Require login */
 if (empty($_SESSION['admin']['id'])) {
     header('Location: login.php');
     exit;
 }
 
-/* DB connection (fill these in) */
 $host = '127.0.0.1';
 $db   = 'wallpapers_schema';
 $user = 'root';
@@ -23,7 +21,6 @@ $pdo = new PDO($dsn, $user, $pass, [
         PDO::ATTR_EMULATE_PREPARES => false,
 ]);
 
-/* Load messages */
 $stmt = $pdo->query(
         "SELECT id, name, email, subject, message, consent, created_at
      FROM contact_messages

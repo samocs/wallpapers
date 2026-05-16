@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login</title>
 
-    <link rel="stylesheet" href="../../../skriptovacie%20jazyky/semestralna%20praca/public/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css">
 
     <style>
         :root{
