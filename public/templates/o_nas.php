@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Sam's Wallpapers</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/public/assets/css/style.css">
 </head>
 <body>
 <nav class="navbar">
     <div class="container">
-        <a href="index.php" class="logo">sam</a>
+        <a href="home.php" class="logo">sam</a>
         <ul class="nav">
-            <li><a href="index.php">home</a></li>
+            <li><a href="home.php">home</a></li>
             <li><a href="galeria.php">gallery</a></li>
             <li><a href="o_nas.php" class="active">about</a></li>
             <li><a href="kontakt.php">contact</a></li>
@@ -143,6 +143,6 @@
     </div>
 </footer>
 
-<script src="js/app.js"></script>
+<script src="/public/assets/js/app.js"></script>
 </body>
 </html>

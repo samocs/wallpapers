@@ -37,15 +37,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="keywords" content="contact, feedback, support">
     <meta name="author" content="samocs">
     <title>Contact - Sam's Wallpapers</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/public/assets/css/style.css">
 </head>
 <body>
 <!-- Navigation -->
 <nav class="navbar">
     <div class="container">
-        <a href="index.php" class="logo">sam</a>
+        <a href="home.php" class="logo">sam</a>
         <ul class="nav">
-            <li><a href="index.php">home</a></li>
+            <li><a href="home.php">home</a></li>
             <li><a href="galeria.php">gallery</a></li>
             <li><a href="o_nas.php">about</a></li>
             <li><a href="kontakt.php" class="active">contact</a></li>
@@ -130,6 +130,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </footer>
 
-<script src="js/app.js"></script>
+<script src="/public/assets/js/app.js"></script>
 </body>
 </html>

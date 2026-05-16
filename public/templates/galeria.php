@@ -15,15 +15,15 @@ $title = page_title('Gallery');
     <meta name="keywords" content="gallery, wallpapers, minimal, monochrome">
     <meta name="author" content="samocs">
     <title><?= htmlspecialchars($title) ?></title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../../skriptovacie%20jazyky/semestralna%20praca/public/css/style.css">
 </head>
 <body>
 <!-- Navigation -->
 <nav class="navbar">
     <div class="container">
-        <a href="index.php" class="logo">sam</a>
+        <a href="../../../skriptovacie%20jazyky/semestralna%20praca/public/index.php" class="logo">sam</a>
         <ul class="nav">
-            <li><a href="index.php">home</a></li>
+            <li><a href="../../../skriptovacie%20jazyky/semestralna%20praca/public/index.php">home</a></li>
             <li><a href="galeria.php" class="active">gallery</a></li>
             <li><a href="o_nas.php">about</a></li>
             <li><a href="kontakt.php">contact</a></li>
@@ -99,6 +99,6 @@ $title = page_title('Gallery');
     </div>
 </footer>
 
-<script src="js/app.js"></script>
+<script src="/public/assets/js/app.js"></script>
 </body>
 </html>
