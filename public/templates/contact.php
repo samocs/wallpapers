@@ -13,7 +13,6 @@ require __DIR__ . '/../../app/controllers/ContactController.php';
 
 $controller = new ContactController($pdo);
 
-// Bezpečná inicializácia premenných
 $success = false;
 $error = '';
 

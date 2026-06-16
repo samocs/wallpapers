@@ -27,7 +27,6 @@ class Auth
             return true;
 
         } catch (PDOException $e) {
-            Helper::log('Auth login error: ' . $e->getMessage());
             return false;
         }
     }

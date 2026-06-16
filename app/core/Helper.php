@@ -8,24 +8,10 @@ class Helper
         $page = ucfirst(basename($script, '.php'));
         return 'Wallpaper Hub - ' . $page;
     }
-
-    public static function log(string $message): void
-    {
-        $dir = __DIR__ . '/../../storage';
-
-        if (!is_dir($dir)) {
-            mkdir($dir, 0777, true);
-        }
-
-        $file = $dir . '/err.log';
-
-        $date = date('Y-m-d H:i:s');
-
-        $formattedMessage = "[$date] {$message}" . PHP_EOL;
-
-        file_put_contents($file, $formattedMessage, FILE_APPEND);
-    }
-    public static function e(string $s): string {
-        return htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+class Redirect{
+    public static function redirect(string $url):void{
+        header('Location: '.$url);
+        exit;
     }
 }

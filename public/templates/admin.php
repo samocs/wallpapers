@@ -105,7 +105,7 @@ $wallpapers = $controller->getWallpapers();
 
             <div class="upload-inner">
                 <form action="admin.php" method="post" enctype="multipart/form-data" class="upload-form">
-                <label class="upload-label">Select Image File:</label>
+                    <label class="upload-label">Select Image File:</label>
                     <input type="file" name="image[]" class="upload-input" multiple>
                     <button type="submit" name="submit" class="upload-btn">
                         ⬆ Upload Image
