@@ -1,33 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Sam's Wallpapers</title>
-    <link rel="stylesheet" href="/public/assets/css/style.css">
-</head>
-<body>
-<nav class="navbar">
-    <div class="container">
-        <a href="home.php" class="logo">sam</a>
-        <ul class="nav">
-            <li><a href="home.php">home</a></li>
-            <li><a href="galeria.php">gallery</a></li>
-            <li><a href="o_nas.php" class="active">about</a></li>
-            <li><a href="kontakt.php">contact</a></li>
-        </ul>
-    </div>
-</nav>
+<?php
+require_once '../../app/core/App.php';
+app::init();
+$title = Helper::getPageTitle();
+?>
 
-<!-- Banner -->
-<section class="banner">
-    <div class="container">
-        <div class="banner-content">
-            <h2>About Sam's Wallpapers</h2>
-            <p>Minimal design meets modern aesthetics</p>
-        </div>
-    </div>
-</section>
+<?php require 'partials/header.php'; ?>
 
 <!-- About Section -->
 <section class="about-section">
@@ -115,34 +92,4 @@
     </div>
 </section>
 
-<footer class="footer">
-    <div class="container">
-        <div class="grid-cols-3">
-            <div>
-                <h4>sam's wallpapers</h4>
-                <p>minimal wallpapers for modern screens</p>
-            </div>
-            <div>
-                <h4>contact</h4>
-                <ul class="footer-links">
-                    <li><a href="mailto:hello@samswallpapers.com">hello@samswallpapers.com</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>links</h4>
-                <ul class="footer-links">
-                    <li><a href="galeria.php">gallery</a></li>
-                    <li><a href="o_nas.php">about</a></li>
-                    <li><a href="kontakt.php">contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 sam's wallpapers</p>
-    </div>
-</footer>
-
-<script src="/public/assets/js/app.js"></script>
-</body>
-</html>
+<?php require 'partials/footer.php'; ?>

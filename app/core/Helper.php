@@ -25,4 +25,7 @@ class Helper
 
         file_put_contents($file, $formattedMessage, FILE_APPEND);
     }
+    public static function e(string $s): string {
+        return htmlspecialchars($s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    }
 }

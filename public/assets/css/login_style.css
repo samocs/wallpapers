@@ -1,0 +1,100 @@
+:root{
+    --bg:#0f172a;
+    --panel:#111827;
+    --panel-2:#1f2937;
+    --text:#e5e7eb;
+    --muted:#9ca3af;
+    --primary:#38bdf8;
+    --danger:#ef4444;
+    --border:#1f2937;
+}
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial;
+    background:var(--bg);
+    color:var(--text);
+}
+
+.auth-container{
+    min-height:100svh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+}
+
+.auth-card{
+    width:min(420px, 100%);
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px;
+}
+
+.auth-title{
+    margin:0 0 6px;
+    font-size:22px;
+    line-height:1.2;
+}
+
+.auth-subtitle{
+    margin:0 0 16px;
+    color:var(--muted);
+    font-size:14px;
+}
+
+.auth-form{display:grid;gap:12px}
+
+.auth-label{
+    display:grid;
+    gap:6px;
+    font-size:14px;
+    color:var(--text);
+}
+
+.auth-input{
+    width:100%;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    background:#0b1220;
+    color:var(--text);
+    outline:none;
+}
+.auth-input:focus{
+    border-color:rgba(56,189,248,.7);
+    box-shadow:0 0 0 3px rgba(56,189,248,.15);
+}
+
+.auth-actions{margin-top:4px;display:grid;gap:10px}
+
+.auth-button{
+    width:100%;
+    padding:10px 12px;
+    border-radius:10px;
+    cursor:pointer;
+    border:0;
+    background:var(--primary);
+    color:#0b1220;
+    font-weight:700;
+}
+
+.auth-error{
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid rgba(239,68,68,.35);
+    background:rgba(239,68,68,.10);
+    color:var(--text);
+    font-size:14px;
+}
+
+.small-note{
+    margin-top:12px;
+    color:var(--muted);
+    font-size:12px;
+    text-align:center;
+}
+
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}

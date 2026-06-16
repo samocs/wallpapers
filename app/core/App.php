@@ -4,8 +4,14 @@ class App
 {
     public static function init(): void
     {
-        require_once __DIR__ . '/db.php';
+        // core
+        require_once __DIR__ . '/Database.php';
         require_once __DIR__ . '/Helper.php';
         require_once __DIR__ . '/Redirect.php';
+        require_once __DIR__ . '/Auth.php';
+
+        // models
+        require_once __DIR__ . '/../models/Contact.php';
+        require_once __DIR__ . '/../models/Wallpaper.php';
     }
 }
